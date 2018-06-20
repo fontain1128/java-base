@@ -19,8 +19,8 @@ public class PackTest {
 	
 	public static void main(String[] args) {
 		//true int->Integer
-		Integer m = 100;
-		Integer n = 100;
+		Integer m = 200;
+		Integer n = 200;
 		System.out.println(m==n);
 		Integer m2 = 127;
 		Integer n2 = 127;
@@ -44,11 +44,13 @@ public class PackTest {
 		Boolean b2 = true;
 		Boolean b3 = true;
 		System.out.println(b2==b3);
-		//true "=="运算符的两个操作数都是包装器类型时，比较的是否指向同一个对象，当有一方是表达式（算数运算），先各自拆箱再装箱，再比较。
-		Integer i = 1;
+		//true "=="运算符的两个操作数都是包装器类型时，比较的是否指向同一个对象，当有一方是表达式（算数运算），先各自拆箱再装箱，再比较,。
+		Integer i = 300;
 		Integer i2 = new Integer(1);
-		Integer i3 = 2;
-		System.out.println(i3==(i+i2));
+		Integer i3 = 301;
+		Integer i9 = i+i2;
+		System.out.println(i3 == i9);//false
+		System.out.println(i3 == (i+i2));//true 拆箱比较数值
 		//true
 		Integer t1 = new Integer(1);
 		Integer t2 = 1;

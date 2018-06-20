@@ -18,7 +18,7 @@ public class Service {
 		}catch(Exception e){
 			lock.unlock();
 		}finally {
-			lock.unlock();;
+			lock.unlock();
 		}
 	}
 
