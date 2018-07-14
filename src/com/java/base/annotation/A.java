@@ -4,4 +4,5 @@ package com.java.base.annotation;
 public interface A {
 
 	public void test();
+	
 }
